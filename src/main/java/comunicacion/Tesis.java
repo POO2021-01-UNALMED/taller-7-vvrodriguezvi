@@ -49,8 +49,8 @@ public class Tesis extends Escrito{
 			this.idea = idea;
 		}
 
-		public int getArgumentos() {
-			return this.argumentos.length;
+		public String[] getArgumentos() {
+			return this.argumentos;
 		}
 
 		public void setArgumentos(String[] argumentos) {
