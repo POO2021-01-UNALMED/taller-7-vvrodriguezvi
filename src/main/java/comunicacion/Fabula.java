@@ -12,7 +12,7 @@ public class Fabula extends Escrito {
 	}
 
 
-	String interpretacion() {
+	public String interpretacion() {
 			return interpretacion;
 	}
 	// getters  and  setters
@@ -30,8 +30,8 @@ public class Fabula extends Escrito {
 	}
 	// Metodos de la clase abstracta heredada
 	
-	int palabrasTotales(int palabrasPagina) {
-		return 0;
+	public int palabrasTotales(int palabrasPagina) {
+		return 1*getPaginas();
 		}
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
@@ -42,7 +42,8 @@ public class Fabula extends Escrito {
 				getTitulo() + "\n" +
 				getAutor() + "\n" +
 				getPaginas() + "\n" +
-				Ensenanza "\n" +
+				getEnsenanza();
+				
 				
 	}
 	

@@ -53,11 +53,11 @@ public class Libro extends  Escrito{
 
 	//metodos de la  clase padre
 	
-	int palabrasTotales(int palabrasPagina) {
-			return 0;
+	public int palabrasTotales(int palabrasPagina) {
+			return 2*getPaginas();
 	}
 
-		String interpretacion() {
+	public String interpretacion() {
 			return interpretacion;
 	}
 	public String toString() {

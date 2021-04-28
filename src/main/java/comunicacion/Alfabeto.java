@@ -1,28 +1,27 @@
 package comunicacion;
 
-import java.util.ArrayList;
-
 public class Alfabeto extends Pictograma {
-	static ArrayList<String> letras = new ArrayList<String>();
-	String interpretacion;
+	private String [] letras;
+	private String interpretacion;
 	
 	// constructor
 	
-	public Alfabeto(String origen, String[] strings, String interpretacion) {
+	public Alfabeto(String origen, String[] letras, String interpretacion) {
 		super(origen);
+		this.letras = letras;
 		this.interpretacion = interpretacion;
 	}
 	
 	// metodos  de la  super clase abstracta
 	
-	String interpretacion() {
+	public String interpretacion() {
 		return interpretacion;
 	}
 	public String toString() {
 		String out = "";
-		for(int i = 0; i < letras.size(); i++) {
-			if(i != (letras.size()-1)) {
-				out += letras.get(i) + ", ";
+		for(int i = 0; i < letras.length; i++) {
+			if(i != (letras.length-1)) {
+				out += letras[i] + ", ";
 			}
 		}
 		return out;	
@@ -30,17 +29,17 @@ public class Alfabeto extends Pictograma {
 	// metodo propio de  la clase
 	
 	public int cantidadLetras() {
-		return Alfabeto.letras.size();
+		return this.letras.length;
 	}
 	
 	//Getters and  setters
 
-	public static ArrayList<String> getLetras() {
+	public String[] getLetras() {
 		return letras;
 	}
 
-	public static void setLetras(ArrayList<String> letras) {
-		Alfabeto.letras = letras;
+	public void setLetras(String[] letras) {
+		this.letras = letras;
 	}
 
 	public String getInterpretacion() {

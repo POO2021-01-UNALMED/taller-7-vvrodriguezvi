@@ -17,15 +17,20 @@ public class Periodico extends Escrito {
 	
 	// metodos de la  clase padre
 	
-		int palabrasTotales(int palabrasPagina) {
-				return 0;
+		public int palabrasTotales(int palabrasPagina) {
+				return 10*getPaginas();
 		}
 
-		String interpretacion() {
+		public String interpretacion() {
 				return interpretacion;
 		}
 		public String toString() {
-				return null;
+				return getOrigen() + "\n" +
+						getTitulo() + "\n" +
+						getAutor() + "\n" +
+						getPaginas() + "\n" +
+						getFecha() + "\n" +
+						getPrimicia();
 			
 		}
 
